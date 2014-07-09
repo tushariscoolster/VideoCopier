@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
-           id="com.gkcgautam.asset2sd"
+           id="com.tushar.html5video"
       version="2.0.0"
       xmlns:android="http://schemas.android.com/apk/res/android"
       >
@@ -10,8 +10,8 @@
     <license>MIT</license>
     <keywords>cordova,asset2sd,gkcgautam</keywords>
 
-    <js-module src="www/asset2sd.js" name="Asset2SD">
-        <clobbers target="Asset2SD" />
+    <js-module src="www/videocopier.js" name="html5video">
+        <clobbers target="html5video" />
     </js-module>
 
     <!-- android -->
@@ -21,7 +21,7 @@
                 <param name="android-package" value="com.tushar.html5video.html5video"/>
             </feature>
         </config-file>
-        <source-file src="src/android/Asset2SD.java" target-dir="src/com/tushar/html5video" />
+        <source-file src="src/com/phonegap/plugins/video/VideoCopier.java" target-dir="src/com/tushar/html5video" />
     </platform>
     <config-file target="AndroidManifest.xml" parent="/manifest">
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

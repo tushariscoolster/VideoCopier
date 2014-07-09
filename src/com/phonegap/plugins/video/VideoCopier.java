@@ -30,11 +30,12 @@ public class VideoCopier extends CordovaPlugin {
             if (action.equals("copyVideo")) {
                 Uri returnUri = copyVideo(args.getString(0));
                 callbackContext.success(returnUri.toString());
+                    callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result));
             }
             else {
-                status = PluginResult.Status.INVALID_ACTION;
+                                 callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.INVALID_ACTION, result));
             }
-            callbackContext.sendPluginResult(new PluginResult(status, result));
+           
         } catch (JSONException e) {
             callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.JSON_EXCEPTION));
         } catch (IOException e) {

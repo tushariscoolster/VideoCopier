@@ -10,8 +10,8 @@
     <license>MIT</license>
     <keywords>cordova,asset2sd,gkcgautam</keywords>
 
-    <js-module src="www/videocopier.js" name="html5video">
-        <clobbers target="html5video" />
+    <js-module src="www/videocopier.js" name="videocopier">
+        <clobbers target="window.plugins.toast" />
     </js-module>
 
     <!-- android -->

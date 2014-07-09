@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
-           id="com.tushar.html5video"
-      version="2.0.0"
-      xmlns:android="http://schemas.android.com/apk/res/android"
-      >
-    <name>Asset2SD</name>
-    <description>Copy a file or directory from Assets to the SD card</description>
-    <license>MIT</license>
-    <keywords>cordova,asset2sd,gkcgautam</keywords>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android"
+id="com.phonegap.plugins.video"
+version="0.0.1">
+  <name>Video</name>
+  <description>Android Video Plugin</description>
+  <license>Apache 2.0</license>
+  <keywords>cordova,video,android</keywords>
+
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="VideoCopier" >
+        <param name="android-package" value="com.phonegap.plugins.video.VideoCopier"/>
+      </feature>
+    </config-file>
 
     <js-module src="www/videocopier.js" name="videocopier">
-        <clobbers target="window.plugins.toast" />
+        <clobbers target="window.plugins.videoCopier" />
     </js-module>
-
-    <!-- android -->
-    <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="html5video" >
-                <param name="android-package" value="com.tushar.html5video.html5video"/>
-            </feature>
-        </config-file>
-        <source-file src="src/com/phonegap/plugins/video/VideoCopier.java" target-dir="src/com/tushar/html5video" />
-    </platform>
-    <config-file target="AndroidManifest.xml" parent="/manifest">
+    <source-file src="src/com/phonegap/plugins/video/VideoCopier.java" target-dir="src/com/phonegap/plugins/video" />
+  </platform>
+   <config-file target="AndroidManifest.xml" parent="/manifest">
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    </config-file>
+    </config-file
 </plugin>

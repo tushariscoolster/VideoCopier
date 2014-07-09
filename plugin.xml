@@ -17,11 +17,11 @@
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Asset2SD" >
-                <param name="android-package" value="com.gkcgautam.asset2sd.Asset2SD"/>
+            <feature name="html5video" >
+                <param name="android-package" value="com.tushar.html5video.html5video"/>
             </feature>
         </config-file>
-        <source-file src="src/android/Asset2SD.java" target-dir="src/com/gkcgautam/asset2sd" />
+        <source-file src="src/android/Asset2SD.java" target-dir="src/com/tushar/html5video" />
     </platform>
     <config-file target="AndroidManifest.xml" parent="/manifest">
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

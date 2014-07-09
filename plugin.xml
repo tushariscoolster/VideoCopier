@@ -17,7 +17,7 @@ version="0.0.1">
     </config-file>
 
     <js-module src="www/videocopier.js" name="videocopier">
-        <clobbers target="window.plugins.videoCopier" />
+        <clobbers target="window.plugins.videoCopier.copy" />
     </js-module>
     <source-file src="src/com/phonegap/plugins/video/VideoCopier.java" target-dir="src/com/phonegap/plugins/video" />
   </platform>

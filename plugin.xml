@@ -23,5 +23,5 @@ version="0.0.1">
   </platform>
    <config-file target="AndroidManifest.xml" parent="/manifest">
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    </config-file
+    </config-file>
 </plugin>
